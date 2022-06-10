@@ -1,7 +1,9 @@
 -- Create database
 CREATE DATABASE interviewExperiences;
 
---  Experiences table
+--  Experiences table experiences;
+DROP TABLE experiences;
+
 CREATE TABLE experiences (
     id SERIAL PRIMARY KEY NOT NULL,
     companyName varchar(64) NOT NULL,
@@ -11,11 +13,15 @@ CREATE TABLE experiences (
     jobSalary varchar(64),
     experience text NOT NULL,
     username varchar(64) NOT NULL,
-    userLinkedInId varchar(255)
+    userLinkedInId varchar(255),
+    approved boolean DEFAULT FALSE
 );
 
 INSERT INTO experiences(companyName,jobRole,jobExperienceLevel,jobLocation,jobSalary,experience,username,userLinkedInId)
-VALUES('amazon','SDE-1',0,'pune','40,00,000','Lorem ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem vero quod ipsa, corrupti tempora ipsum ducimus suscipit, illo explicabo dignissimos quam? Ea eos quod culpa accusantium possimus voluptate molestiae reiciendis corporis id, doloribus est dolorum maiores repellendus velit facilis reprehenderit doloremque itaque hic. Dicta porro dolorum, excepturi, ullam quia expedita vero unde, vitae velit pariatur itaque. Suscipit totam odio magni dolorem optio, consectetur eos exercitationem nemo architecto laborum perspiciatis at id perferendis atque eaque hic accusamus fugit autem modi rem. Debitis totam tenetur in impedit cupiditate ex! Hic dignissimos neque reiciendis sint ad aperiam ipsa est ut! Enim, similique.','anonomys','a');
+VALUES('amazon','SDE-1',0,'pune','40,00,000','Lorem ipsum dolor sit amet','anonomys','a');
+
+INSERT INTO experiences(companyName,jobRole,jobExperienceLevel,jobLocation,jobSalary,experience,username,userLinkedInId,approved)
+VALUES('amazon','SDE-1',0,'pune','40,00,000','Lorem ipsum dolor sit amet','anonomys','a',TRUE);
 
 
 -- Users table
