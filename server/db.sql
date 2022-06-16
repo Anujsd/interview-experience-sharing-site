@@ -1,5 +1,14 @@
+-- \l To see databases
+-- \d To see tables
+-- \c To change database
+
+-- current database is postgres change it to interviewExperiences in final
+
 -- Create database
 CREATE DATABASE interviewExperiences;
+
+-- Go to database
+/c interviewExperiences;
 
 --  Experiences table experiences;
 DROP TABLE experiences;
